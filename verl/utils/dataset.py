@@ -123,6 +123,7 @@ class RLHFDataset(Dataset, ImageProcessMixin):
     def __getitem__(self, index):
         row_dict: dict = self.dataset[index]
         prompt_str: str = row_dict[self.prompt_key]
+        import ipdb;ipdb.set_trace()
         if self.system_prompt:
             prompt_str = " ".join((self.system_prompt.strip(), prompt_str))
 
